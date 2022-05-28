@@ -261,19 +261,21 @@ header{
 }
 .services-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    gap: 2rem;
+    /* height: 75px; */
     margin-top: 2rem;
 
 }
 .services-container .box{
-    padding: 10px;
-    border-radius: 1rem;
+    padding: 20px;
+    border-radius: 10px;
+    /* height: 70px; */
     box-shadow: 1px 4px 41px rgb(0, 0, 0.1);
 }
 .services-container .box .box-img{
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 .services-container .box .box-img img{
     width: 100%;
@@ -331,6 +333,7 @@ header{
 }
 .about-img img{
     width: 100%;
+    /* height: 270px; */
 
 }
 .about-text span {
@@ -388,5 +391,182 @@ header{
 .reviews-container .box .stars .bx{
     color: var(--main-color);
 }
+.newsletter{
+    background: linear-gradient(to top right,rgba(53, 17, 233, 0.733),rgb(123, 164, 197));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    
+}
+.newsletter h2{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.newsletter .box{
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 4px 8px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter .box input{
+    border: none;
+    outline: none;
+
+}
+.newsletter .box .btn{
+    background: #1457f2;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+}
+.copyright{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.social a{
+    color: #444;
+    padding: 10px;
+    font-size:21px;
+}
+
+/* Making the web responsive
+ */
+
+ @media (max-width:991px) {
+     header{
+         padding: 18px 40px;
+     }
+     section{
+         padding: 50px 40px;
+
+     }
+     
+ }
+ @media(max-width:881px)
+{
+    .home{
+        background-position: left;
+
+    }
+    .form-container form{
+        bottom: 0.2rem;
+        left: 40px;
+    }
+}
+@media (max-width:768px){
+    header{
+        padding: 11px 40px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .sign-up{
+        display: none;
+    }
+    .text h21{
+        font-size: 2.5rem;
+    }
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .form-container form{
+        position: unset;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow:0 4px 4px rgb(0,0, 0.1);
+        transition: 0.2s ease;
+        text-align: left;
+    }
+    .navbar .active{
+        top: 100%;
+        
+    }
+    .navbar a{
+        padding: 1rem;
+        border-left: 2px solid var(--main-color);
+        margin: 1rem;
+        display: block;
+
+    }
+    .navbar a:hover{
+        color: #ffff;
+        background: var(--main-color);
+        border: none;
+    }
+    .navbar a::after{
+        display: none;
+
+    }
+    .heading span{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .heading h1{
+        font-size: 1.3rem;
+    }
+    .about-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-img{
+        padding: 1rem;
+    }
+    
+}
+@media (max-width:568px){
+    .copyright{
+        flex-direction: column;
+
+    }
+    .newsletter .box{
+        width: 284px;
+    }
+    .form-container{
+        padding-top: 2rem;
+
+    }
+}
+@media(max-width:350px){
+    header{
+        padding: 3px 14px ;
+
+    }
+    .logo img{
+        width: 30px;
+    }
+    section{
+        padding-inline-start: 50px 14px;
+    }
+    .header-btn .sign-in{
+        padding: 7px 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .text h1{
+        font-size: 2rem;
+    }
+    .form-container{
+        padding-top: 2rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(auto-fit,minmax(254px,auto));
+    }
+
+}
 
